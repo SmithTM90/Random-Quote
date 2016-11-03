@@ -1,0 +1,44 @@
+body {
+	transition: all linear 0.5s;
+}
+
+i {
+	color: #ffffff;
+}
+
+a {
+	font-size: 25px;
+}
+
+.quoteArea {
+	font-size: 25px;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+.tweet {
+	background: #3498db;
+	font-size: 15px;
+	border: solid #fff 1px;
+	height: 43px;
+	width: 43px;
+	transition: all linear 0.5s;
+}
+
+.nextButton {
+	font-family: Arial;
+  	color: #ffffff;
+  	font-size: 15px;
+  	background: #3498db;
+  	padding: 10px 10px 10px 10px;
+  	border: solid #fff 1px;
+  	text-decoration: none;
+	outline: none;
+	transition: all linear 0.5s;
+}
+
+.mainContainer {
+	margin-top: 15%;
+	padding: 30px;
+	background-color: white;
+}
