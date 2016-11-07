@@ -26,9 +26,15 @@ quoteApp.controller('getQuote', ['$scope', '$http', function($scope, $http) {
       
     $scope.color = $scope.colors[num];
 
-		$http.get('https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en')
+		$http({
+			method: 'GET',
+			url: 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous',
+			headers: {
+				'X-mashape-key': 'gj7iyunSAWmshyVuvHRdDmkeZG8sp1CPgJfjsnzplRGGBiwvYN'
+			}
+		})
 		.then(function success(response) {
-
+			console.log(response.data);
 			$scope.quote = response.data 
 			$scope.href = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + $scope.quote.quoteText + '" ' + $scope.quote.quoteAuthor);
   
@@ -37,8 +43,6 @@ quoteApp.controller('getQuote', ['$scope', '$http', function($scope, $http) {
 			console.log(response);
 		})
 	}	
-
-	// $scope.href = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + $scope.quote.quoteText + '" ' + $scope.quote.quoteAuthor);
 
 	$scope.Populate();
 }])
