@@ -36,7 +36,7 @@ quoteApp.controller('getQuote', ['$scope', '$http', function($scope, $http) {
 		.then(function success(response) {
 			console.log(response.data);
 			$scope.quote = response.data 
-			$scope.href = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + $scope.quote.quoteText + '" ' + $scope.quote.quoteAuthor);
+			$scope.href = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + $scope.quote.quote + '" ' + $scope.quote.author);
   
 		
 		}, function error(response) {
